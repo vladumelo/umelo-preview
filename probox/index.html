@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta name="robots" content="noindex" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f3f4ef" />
+    <meta name="description" content="Соберите смету благоустройства: выберите работы, задайте площадь и сразу увидите стоимость работ и материалов. Умело, Владивосток." />
+    <title>Соберите свой участок — смета онлайн · Умело</title>
+    <link rel="icon" type="image/png" href="/umelo-preview/assets/favicon.png" />
+    <link rel="canonical" href="https://umelo-buro.ru/probox/" />
+    <link rel="stylesheet" href="./probox.css?v=157bb5b23ce21893" />
+    <script defer src="./probox.bundle.js?v=76d10475adc60195"></script>
+  </head>
+  <body>
+    <a class="skip" href="#catalog">К выбору работ</a>
+    <header class="site-header">
+      <div class="shell header-inner">
+        <a class="brand" href="/umelo-preview/" aria-label="Умело — главная">умело<span>.</span></a>
+        <span class="header-caption">Конструктор благоустройства</span>
+        <a class="header-phone" href="tel:+79941017700">Позвонить ↗</a>
+        <button class="header-cart" type="button" data-open-estimate><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5h2l2 10h10l2-7H8M10 20h.1M18 20h.1"/></svg>Моя смета <span data-count>0</span></button>
+      </div>
+    </header>
+    <main class="shell">
+      <section class="intro" aria-labelledby="page-title">
+        <div><p class="eyebrow"><span></span> Участок начинается с вашего выбора</p><h1 id="page-title">Соберите участок.<br /><span>Смета — сразу.</span></h1><p class="intro-copy">Выберите работы и укажите объёмы. Получите предварительную смету на материалы, работы и доставку.</p></div>
+        <div class="intro-note"><span class="note-spark" aria-hidden="true">↳</span><p>Плитка — это не только плитка.<br /><strong>Посчитаем и то, что под ней.</strong></p><span class="note-caption">Основание · материалы · работа</span></div>
+      </section>
+      <section class="quick-start" aria-label="Быстрый старт">
+        <span class="quick-label">Начать в один клик</span>
+        <button type="button" data-preset="path"><span aria-hidden="true">↗</span> Дорожка к дому <small>20 м²</small></button>
+        <button type="button" data-preset="parking"><span aria-hidden="true">↗</span> Бетонная площадка <small>30 м²</small></button>
+        <button type="button" data-preset="site"><span aria-hidden="true">↗</span> Подготовка участка <small>100 м²</small></button>
+      </section>
+      <div class="shop-layout">
+        <section class="catalog" id="catalog" aria-label="Каталог работ" tabindex="-1">
+          <nav class="category-tabs" id="category-tabs" aria-label="Направления работ"></nav>
+          <div class="catalog-toolbar"><div><h2 id="catalog-title">Дорожки</h2><p id="catalog-subtitle">Основание, покрытие и материалы — в одной позиции.</p></div><label class="search"><span class="sr-only">Найти работу</span><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10" cy="10" r="6"/><path d="m15 15 5 5"/></svg><input type="search" id="search" placeholder="Поиск" autocomplete="off" /></label></div>
+          <div class="product-grid" id="product-grid"></div>
+          <div class="catalog-footnote"><span aria-hidden="true">↳</span><p>Меняйте состав в карточке. Смета пересчитывается сразу.</p><a href="/umelo-preview/#projects">Проекты бюро ↗</a></div>
+        </section>
+        <aside class="cart" id="cart" aria-label="Корзина сметы"></aside>
+      </div>
+    </main>
+    <footer class="site-footer shell"><a class="brand" href="/umelo-preview/">умело<span>.</span></a><p>Честная архитектура.<br />Владивосток</p><a href="tel:+79941017700">+7 (994) 101-77-00 ↗</a><span>Сначала понятная смета. Потом решение.</span></footer>
+    <div class="mobile-cart" id="mobile-cart" hidden></div>
+    <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+    <div id="dialog-root"></div>
+    <noscript><p class="noscript">Включите JavaScript для расчёта сметы или позвоните: <a href="tel:+79941017700">+7 (994) 101-77-00</a>.</p></noscript>
+  </body>
+</html>
