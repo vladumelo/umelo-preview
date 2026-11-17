@@ -9,14 +9,17 @@
     <title>Сколько стоит ваш двор? · Умело</title>
     <link rel="canonical" href="https://umelo-buro.ru/probox/" />
     <link rel="icon" type="image/png" href="../assets/favicon.png" />
-    <link rel="stylesheet" href="./promo.css?v=66e5430b7631" />
-    <script defer src="./probox.bundle.js?v=e79c31876f246bc5"></script>
-    <script defer src="./quick-estimate.js?v=74a0f2c551b8"></script>
+    <link rel="stylesheet" href="./promo.css?v=5c17d705d65c" />
+    <script defer src="./probox.bundle.js?v=b0c07ee3b7cf"></script>
+    <script defer src="./quick-estimate.js?v=c30cf33dffc1"></script>
   </head>
   <body data-promo-quick>
     <header class="shell topbar">
       <a class="brand" href="../" aria-label="Умело — главная">умело<span>.</span></a>
-      <a class="phone-link" href="tel:+79941017700">Позвонить <span aria-hidden="true">›</span></a>
+      <div class="topbar-actions">
+        <a class="site-link" href="../">Перейти на сайт</a>
+        <button class="cart-open" type="button" id="cart-open" aria-haspopup="dialog" hidden>Корзина <span id="cart-count" aria-live="polite">0</span></button>
+      </div>
     </header>
 
     <main class="shell">
@@ -27,7 +30,7 @@
         </picture>
         <div class="hero-copy">
           <h1 id="page-title">Сколько стоит <br class="hero-line" />ваш двор?</h1>
-          <p>Прикиньте бюджет на покрытие. Озеленение, навесы и мебель подберём под ваш участок.</p>
+          <p>Рассчитайте покрытие, озеленение или навес. Соберите позиции в одну смету.</p>
           <a class="button primary-button" href="#choices">Выбрать работы <span aria-hidden="true">↓</span></a>
         </div>
       </section>
@@ -35,28 +38,32 @@
       <section class="choices" id="choices" aria-labelledby="choices-title">
         <h2 id="choices-title">С чего начнём?</h2>
         <div class="choice-grid">
-          <a class="choice" href="./details.html#section/paths" data-choice="paving">
+          <button type="button" class="choice" data-choice="paving" aria-haspopup="dialog">
             <img src="./images/paving.webp" width="760" height="508" alt="" decoding="async" />
             <div class="choice-copy"><h3>Покрытия</h3><p>Плитка, бетон, щебень</p></div>
             <span class="choice-arrow" aria-hidden="true">›</span>
-          </a>
-          <a class="choice" href="./details.html#section/green" data-choice="planting">
+          </button>
+          <button type="button" class="choice" data-choice="planting" aria-haspopup="dialog">
             <img src="./images/planting.webp" width="760" height="508" alt="" loading="lazy" decoding="async" />
-            <div class="choice-copy"><h3>Озеленение</h3><p>Газон, деревья, цветники</p></div>
+            <div class="choice-copy"><h3>Озеленение</h3><p>Газон и посадки</p></div>
             <span class="choice-arrow" aria-hidden="true">›</span>
-          </a>
-          <a class="choice" href="./details.html#section/canopies" data-choice="furniture">
+          </button>
+          <button type="button" class="choice" data-choice="furniture" aria-haspopup="dialog">
             <img src="./images/furniture.webp" width="760" height="508" alt="" loading="lazy" decoding="async" />
-            <div class="choice-copy"><h3>Навесы и мебель</h3><p>Перголы, скамейки, кашпо</p></div>
+            <div class="choice-copy"><h3>Навесы и мебель</h3><p>Навесы, перголы, скамейки</p></div>
             <span class="choice-arrow" aria-hidden="true">›</span>
-          </a>
+          </button>
         </div>
       </section>
+      <noscript><p>Для расчёта нужен JavaScript. Вы можете связаться с нами по телефону или в Telegram.</p></noscript>
     </main>
 
     <footer class="shell site-footer">
       <p>Бюро «Умело» · Владивосток</p>
-      <a href="https://t.me/umeloburo" target="_blank" rel="noopener noreferrer">Написать в Telegram <span aria-hidden="true">›</span></a>
+      <div class="footer-actions">
+        <a href="tel:+79941017700">Позвонить</a>
+        <a href="https://t.me/umeloburo" target="_blank" rel="noopener noreferrer">Написать в Telegram <span aria-hidden="true">›</span></a>
+      </div>
     </footer>
 
     <dialog class="quote" id="quote" aria-labelledby="quote-title">
@@ -65,16 +72,31 @@
           <h2 id="quote-title"></h2>
           <button type="button" class="close" aria-label="Закрыть" data-close>×</button>
         </div>
-        <form id="quick-form" novalidate>
+        <form id="quick-form">
           <div class="quote-fields">
             <label class="field">Что нужно<select id="work"></select></label>
-            <label class="field" id="quantity-field"><span>Площадь, м²</span><input id="quantity" type="text" inputmode="decimal" autocomplete="off" /></label>
+            <label class="field" id="quantity-field"><span>Площадь, м²</span><input id="quantity" type="text" inputmode="decimal" autocomplete="off" aria-describedby="quote-note" /></label>
           </div>
           <div class="quote-price" id="price" aria-live="polite"></div>
           <p class="quote-note" id="quote-note"></p>
-          <a class="button primary-button quote-cta" id="quote-contact" href="https://t.me/umeloburo" target="_blank" rel="noopener noreferrer">Обсудить в Telegram <span aria-hidden="true">›</span></a>
-          <a class="details-link" id="quote-details" href="./details.html">Открыть подробный калькулятор</a>
+          <button class="button primary-button quote-cta" type="submit" id="quote-add">Добавить в корзину <span aria-hidden="true">›</span></button>
         </form>
+      </div>
+    </dialog>
+    <dialog class="quote" id="cart" aria-labelledby="cart-title">
+      <div class="quote-inner">
+        <div class="quote-heading">
+          <h2 id="cart-title">Корзина</h2>
+          <button type="button" class="close" aria-label="Закрыть корзину" data-close>×</button>
+        </div>
+        <p id="cart-empty" class="quote-note">Пока пусто. Выберите, что хотите сделать.</p>
+        <ul id="cart-list" class="cart-list" hidden></ul>
+        <div id="cart-summary" hidden>
+          <div class="cart-total"><span>Предварительно</span><strong id="cart-total" aria-live="polite"></strong></div>
+          <p id="cart-note" class="quote-note" hidden></p>
+          <a class="button primary-button quote-cta" id="cart-contact" href="https://t.me/umeloburo" target="_blank" rel="noopener noreferrer">Обсудить в Telegram <span aria-hidden="true">›</span></a>
+        </div>
+        <button type="button" class="continue" data-close>Продолжить выбор</button>
       </div>
     </dialog>
   </body>
