@@ -4,49 +4,78 @@
     <meta name="robots" content="noindex" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#f3f4ef" />
-    <meta name="description" content="Соберите смету благоустройства: выберите работы, задайте площадь и сразу увидите стоимость работ и материалов. Умело, Владивосток." />
-    <title>Соберите свой участок — смета онлайн · Умело</title>
-    <link rel="icon" type="image/png" href="/umelo-preview/assets/favicon.png" />
+    <meta name="theme-color" content="#f8f7f1" />
+    <meta name="description" content="Благоустройство участка во Владивостоке. Прикиньте стоимость покрытия или обсудите озеленение, навесы и садовую мебель с бюро Умело." />
+    <title>Сколько стоит ваш двор? · Умело</title>
     <link rel="canonical" href="https://umelo-buro.ru/probox/" />
-    <link rel="stylesheet" href="./probox.css?v=157bb5b23ce21893" />
-    <script defer src="./probox.bundle.js?v=76d10475adc60195"></script>
+    <link rel="icon" type="image/png" href="../assets/favicon.png" />
+    <link rel="stylesheet" href="./promo.css?v=66e5430b7631" />
+    <script defer src="./probox.bundle.js?v=e79c31876f246bc5"></script>
+    <script defer src="./quick-estimate.js?v=74a0f2c551b8"></script>
   </head>
-  <body>
-    <a class="skip" href="#catalog">К выбору работ</a>
-    <header class="site-header">
-      <div class="shell header-inner">
-        <a class="brand" href="/umelo-preview/" aria-label="Умело — главная">умело<span>.</span></a>
-        <span class="header-caption">Конструктор благоустройства</span>
-        <a class="header-phone" href="tel:+79941017700">Позвонить ↗</a>
-        <button class="header-cart" type="button" data-open-estimate><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5h2l2 10h10l2-7H8M10 20h.1M18 20h.1"/></svg>Моя смета <span data-count>0</span></button>
-      </div>
+  <body data-promo-quick>
+    <header class="shell topbar">
+      <a class="brand" href="../" aria-label="Умело — главная">умело<span>.</span></a>
+      <a class="phone-link" href="tel:+79941017700">Позвонить <span aria-hidden="true">›</span></a>
     </header>
+
     <main class="shell">
-      <section class="intro" aria-labelledby="page-title">
-        <div><p class="eyebrow"><span></span> Участок начинается с вашего выбора</p><h1 id="page-title">Соберите участок.<br /><span>Смета — сразу.</span></h1><p class="intro-copy">Выберите работы и укажите объёмы. Получите предварительную смету на материалы, работы и доставку.</p></div>
-        <div class="intro-note"><span class="note-spark" aria-hidden="true">↳</span><p>Плитка — это не только плитка.<br /><strong>Посчитаем и то, что под ней.</strong></p><span class="note-caption">Основание · материалы · работа</span></div>
+      <section class="hero" aria-labelledby="page-title">
+        <picture class="hero-media">
+          <source media="(max-width: 700px)" srcset="./images/hero-mobile.webp" />
+          <img class="hero-image" src="./images/hero.webp" width="1400" height="934" alt="Терраса с мощением, посадками и деревянной перголой" fetchpriority="high" />
+        </picture>
+        <div class="hero-copy">
+          <h1 id="page-title">Сколько стоит <br class="hero-line" />ваш двор?</h1>
+          <p>Прикиньте бюджет на покрытие. Озеленение, навесы и мебель подберём под ваш участок.</p>
+          <a class="button primary-button" href="#choices">Выбрать работы <span aria-hidden="true">↓</span></a>
+        </div>
       </section>
-      <section class="quick-start" aria-label="Быстрый старт">
-        <span class="quick-label">Начать в один клик</span>
-        <button type="button" data-preset="path"><span aria-hidden="true">↗</span> Дорожка к дому <small>20 м²</small></button>
-        <button type="button" data-preset="parking"><span aria-hidden="true">↗</span> Бетонная площадка <small>30 м²</small></button>
-        <button type="button" data-preset="site"><span aria-hidden="true">↗</span> Подготовка участка <small>100 м²</small></button>
+
+      <section class="choices" id="choices" aria-labelledby="choices-title">
+        <h2 id="choices-title">С чего начнём?</h2>
+        <div class="choice-grid">
+          <a class="choice" href="./details.html#section/paths" data-choice="paving">
+            <img src="./images/paving.webp" width="760" height="508" alt="" decoding="async" />
+            <div class="choice-copy"><h3>Покрытия</h3><p>Плитка, бетон, щебень</p></div>
+            <span class="choice-arrow" aria-hidden="true">›</span>
+          </a>
+          <a class="choice" href="./details.html#section/green" data-choice="planting">
+            <img src="./images/planting.webp" width="760" height="508" alt="" loading="lazy" decoding="async" />
+            <div class="choice-copy"><h3>Озеленение</h3><p>Газон, деревья, цветники</p></div>
+            <span class="choice-arrow" aria-hidden="true">›</span>
+          </a>
+          <a class="choice" href="./details.html#section/canopies" data-choice="furniture">
+            <img src="./images/furniture.webp" width="760" height="508" alt="" loading="lazy" decoding="async" />
+            <div class="choice-copy"><h3>Навесы и мебель</h3><p>Перголы, скамейки, кашпо</p></div>
+            <span class="choice-arrow" aria-hidden="true">›</span>
+          </a>
+        </div>
       </section>
-      <div class="shop-layout">
-        <section class="catalog" id="catalog" aria-label="Каталог работ" tabindex="-1">
-          <nav class="category-tabs" id="category-tabs" aria-label="Направления работ"></nav>
-          <div class="catalog-toolbar"><div><h2 id="catalog-title">Дорожки</h2><p id="catalog-subtitle">Основание, покрытие и материалы — в одной позиции.</p></div><label class="search"><span class="sr-only">Найти работу</span><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10" cy="10" r="6"/><path d="m15 15 5 5"/></svg><input type="search" id="search" placeholder="Поиск" autocomplete="off" /></label></div>
-          <div class="product-grid" id="product-grid"></div>
-          <div class="catalog-footnote"><span aria-hidden="true">↳</span><p>Меняйте состав в карточке. Смета пересчитывается сразу.</p><a href="/umelo-preview/#projects">Проекты бюро ↗</a></div>
-        </section>
-        <aside class="cart" id="cart" aria-label="Корзина сметы"></aside>
-      </div>
     </main>
-    <footer class="site-footer shell"><a class="brand" href="/umelo-preview/">умело<span>.</span></a><p>Честная архитектура.<br />Владивосток</p><a href="tel:+79941017700">+7 (994) 101-77-00 ↗</a><span>Сначала понятная смета. Потом решение.</span></footer>
-    <div class="mobile-cart" id="mobile-cart" hidden></div>
-    <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
-    <div id="dialog-root"></div>
-    <noscript><p class="noscript">Включите JavaScript для расчёта сметы или позвоните: <a href="tel:+79941017700">+7 (994) 101-77-00</a>.</p></noscript>
+
+    <footer class="shell site-footer">
+      <p>Бюро «Умело» · Владивосток</p>
+      <a href="https://t.me/umeloburo" target="_blank" rel="noopener noreferrer">Написать в Telegram <span aria-hidden="true">›</span></a>
+    </footer>
+
+    <dialog class="quote" id="quote" aria-labelledby="quote-title">
+      <div class="quote-inner">
+        <div class="quote-heading">
+          <h2 id="quote-title"></h2>
+          <button type="button" class="close" aria-label="Закрыть" data-close>×</button>
+        </div>
+        <form id="quick-form" novalidate>
+          <div class="quote-fields">
+            <label class="field">Что нужно<select id="work"></select></label>
+            <label class="field" id="quantity-field"><span>Площадь, м²</span><input id="quantity" type="text" inputmode="decimal" autocomplete="off" /></label>
+          </div>
+          <div class="quote-price" id="price" aria-live="polite"></div>
+          <p class="quote-note" id="quote-note"></p>
+          <a class="button primary-button quote-cta" id="quote-contact" href="https://t.me/umeloburo" target="_blank" rel="noopener noreferrer">Обсудить в Telegram <span aria-hidden="true">›</span></a>
+          <a class="details-link" id="quote-details" href="./details.html">Открыть подробный калькулятор</a>
+        </form>
+      </div>
+    </dialog>
   </body>
 </html>
